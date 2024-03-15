@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnimeWatcher</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Add a div for the "AnimeWatcher" text with two colors -->
+<div id="header-container">
+  <div id="logo">
+    <span id="anime">Anime</span>
+    <span id="watcher">Watcher</span>
+  </div>
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search...">
+  </div>
+</div>
+
+
+<!-- Add a div for the "Popular" text -->
+<div class="popular-text">
+  <h1>Popular</h1>
+</div>
+
+<div class="anime-container" id="anime-container">
+  <!-- Anime items will be inserted here dynamically -->
+</div>
+
+<div class="loader" id="loader"></div> <!-- Loading spinner -->
+
+<div class="navigation-container">
+  <button onclick="previousPage()">Previous</button>
+  <button onclick="nextPage()">Next</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

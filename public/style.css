@@ -1,0 +1,121 @@
+body {
+  background-color: black;
+  font-family: Source Code Pro;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+.popular-text {
+  text-align: center;
+  margin-bottom: 20px; /* Add some margin below the text */
+  color: white;
+}
+
+#header-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space items horizontally */
+  margin-top: 20px; /* Add margin to the top */
+  padding: 0 20px; /* Add padding to align with the left and right border */
+}
+
+#logo {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: flex-start; /* Align to the left side */
+  margin-top: 20px; /* Add margin to the top */
+  margin-bottom: 20px; /* Add margin to the bottom */
+  padding-left: 20px; /* Add padding to align with the left border */
+}
+
+#anime {
+  color: white; /* White color for "Anime" */
+  font-size: 24px; /* Adjust font size */
+}
+
+#watcher {
+  color: #3498db; /* Blue color for "Watcher" */
+  font-size: 24px; /* Adjust font size */
+  margin-left: 5px; /* Add margin between "Anime" and "Watcher" */
+}
+.search-container {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Align items vertically */
+  /* justify-content: center; */ /* Remove this line to prevent centering horizontally */
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+#search-input {
+  padding: 8px;
+  width: 200px;
+  /* margin-left: 10px; */ /* Remove this line */
+  margin: 0 auto; /* Add this line to center the search bar horizontally */
+}
+
+p {
+  color: aliceblue;
+}
+
+#anime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for responsiveness */
+  gap: 10px; /* Adjust the gap between items */
+  margin: 0 auto; /* Center the grid horizontally */
+  max-width: 900px; /* Limit the width of the grid */
+}
+
+.anime-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Increase padding to create larger gap */
+  border-radius: 8px; /* Add border radius */
+  width: 100%; /* Adjust width to fit the grid */
+}
+
+.anime-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Add border radius */
+  margin-bottom: 10px; /* Add space between image and title */
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.anime-image:hover {
+  transform: scale(1.05); /* Increase size on hover */
+}
+
+
+.anime-title {
+  color: #ffffff; /* Text color */
+  text-align: center; /* Center text */
+  font-size: 16px; /* Adjust font size */
+  margin-top: auto; /* Push the title to the bottom of the container */
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none; /* Initially hidden */
+  position: absolute; /* Position the loader */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center exactly */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Media query for responsiveness on smaller screens */
+@media screen and (max-width: 600px) {
+  #anime-container {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Change to 1 column on small screens */
+  }
+}
